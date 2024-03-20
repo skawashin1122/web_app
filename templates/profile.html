@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Hello SQL</h1>
+    <p>{{ message }}</p>
+
+    <ul>
+        <li>id：{{ player.id }}</li>
+        <li>名前：{{ player.name }}</li>
+        <li>職業：{{ player.job_name }}</li>
+        <li>レベル：{{ player.level }}</li>
+    </ul>
+
+    <p><a href = "../">戻る</a></p>
+
+{% endblock %}

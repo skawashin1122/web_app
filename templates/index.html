@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Hello SQL</h1>
+    <p>{{ message }}</p>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">name</th>
+              <th scope="col">job name</th>
+              <th scope="col">level</th>
+              <th scope="col">link</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for player in players %}
+            <tr>
+                <th scope="row">{{ player.id }}</td>
+                <td>{{ player.name }}</td>
+                <td>{{ player.job_name }}</td>
+                <td>{{ player.level }}</td>
+                <td><a href='show/{{ player.id }}'>表示</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
+
+
